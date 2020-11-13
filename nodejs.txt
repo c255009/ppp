@@ -1,0 +1,39 @@
+// 九九乘法表
+for(let i = 1; i<=9; i++){
+ for(let j=1; j<=9; j++){
+  console.log(i + "*" +j + "=" + i*j)
+ }
+ console.log("")
+
+}
+
+console.log("-".repeat(50));
+
+// 分組
+let arrays = ["a","b","c","c","c","a","d","b","b","a","c"];
+collectObject = {};
+
+for (let ele of arrays){
+ if(!(ele in collectObject)){
+  collectObject[ele] = 1;
+ }else{
+  collectObject[ele] += 1;
+ }
+}
+
+console.log(collectObject);
+
+
+console.log("-".repeat(50));
+
+let fibonacciResult = (num) => {
+ if(num === 1){
+  return 1;
+ }else if (num === 2){
+  return 1;
+ }else{
+  return fibonacciResult(num - 1) + fibonacciResult(num - 2);
+ }
+}
+
+console.log(fibonacciResult(6));
